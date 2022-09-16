@@ -1,0 +1,28 @@
+<header class="header">
+  <app-navigation color="text-white" img="https://i.ibb.co/XWLQ47Q/Group-8.png" marg="ml-20"></app-navigation>
+
+  <h2 class="text-center text-white text-6xl">Our Coffe</h2>
+
+</header>
+<app-about-product prodName="About Our Beans" prodImg="https://i.ibb.co/X4dt93T/Mask-Group.png"></app-about-product>
+<div class="m-12 flex justify-around">
+
+  <div class="w-1/2 ">
+    Looking for
+    <input type="text" class="mb-2 border py-2 px-4 mx-4 rounded" placeholder="Search products ..." [(ngModel)]="term">
+  </div>
+  <div class="flex items-center">
+    Or filter
+    <button class="border rounded px-4 mx-4 hover:bg-gray-200" (click)="filterPressed('Kenya')">
+      Kenya</button>
+    <button class="border rounded px-4 mx-4 hover:bg-gray-200" (click)="filterPressed('Brasil')">
+      Brasil</button>
+    <button class="border rounded px-4 mx-4 hover:bg-gray-200" (click)="filterPressed('Columbia')">
+      Columbia</button>
+  </div>
+</div>
+
+
+
+
+<app-card *ngFor="let card of cards | search: term | filter: filterValue" [card]="card"></app-card>

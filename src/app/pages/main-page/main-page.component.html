@@ -1,0 +1,6 @@
+<app-header></app-header>
+<app-about-us></app-about-us>
+<div class="best">
+  <h2 class="text-center text-3xl pt-12">Our best</h2>
+  <app-card *ngFor="let card of cards" [card]="card"></app-card>
+</div>

@@ -1,0 +1,9 @@
+<div class="inline-block mx-12 my-10" routerLink='/about-page'>
+  <div
+    class="py-4 px-6 border rounded flex justify-center flex-col mb-2 bg-white/50 hover:bg-white/80 hover:cursor-pointer hover:scale-110">
+    <img [src]="card.image" [alt]="card.title" class=" mb-2">
+    <h2 class="md-2 text-md text-end">{{ card.title }}</h2>
+    <p class="text-sm text-end">{{card.description}}</p>
+    <p class="text-sm text-end">Price: <span class="font-bold"> {{ card.price | currency }}</span></p>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<header class="header">
+  <app-navigation color="text-white" img="https://i.ibb.co/XWLQ47Q/Group-8.png" marg="ml-20"></app-navigation>
+
+  <h2 class="text-center text-white text-6xl">For Your Pleasure</h2>
+
+</header>
+<app-about-product prodName="About Our goods" prodImg="https://i.ibb.co/cywDR3F/coffee.png"></app-about-product>
+
+<app-card *ngFor="let card of cards" [card]="card"></app-card>
